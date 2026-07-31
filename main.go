@@ -84,7 +84,7 @@ func run(ctx context.Context, cmd *cli.Command) error {
 		if err != nil {
 			return fmt.Errorf("stdin is not a terminal and /dev/tty is unavailable: %w", err)
 		}
-		defer tty.Close()
+		defer func() { _ = tty.Close() }()
 		opts = append(opts, tea.WithInput(tty))
 	}
 

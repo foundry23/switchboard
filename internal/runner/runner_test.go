@@ -71,15 +71,15 @@ func TestLiveLastLine(t *testing.T) {
 	if live.LastLine() != "" {
 		t.Errorf("empty buffer LastLine = %q", live.LastLine())
 	}
-	live.Write([]byte("one\ntwo\n"))
+	_, _ = live.Write([]byte("one\ntwo\n"))
 	if got := live.LastLine(); got != "two" {
 		t.Errorf("LastLine = %q, want two", got)
 	}
-	live.Write([]byte("thr"))
+	_, _ = live.Write([]byte("thr"))
 	if got := live.LastLine(); got != "thr" {
 		t.Errorf("LastLine = %q, want partial line thr", got)
 	}
-	live.Write([]byte("ee\rprogress 50%"))
+	_, _ = live.Write([]byte("ee\rprogress 50%"))
 	if got := live.LastLine(); got != "progress 50%" {
 		t.Errorf("LastLine = %q, want text after carriage return", got)
 	}

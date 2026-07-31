@@ -61,7 +61,7 @@ func TestBusyStatusShowsLiveOutput(t *testing.T) {
 	m := newTestModel(t, spec.Item{Label: "a", On: "true"})
 	next, _ := m.Update(key(tea.KeySpace))
 	nm := next.(Model)
-	nm.items[0].live.Write([]byte("cloning repo\nchecking out branch\n"))
+	_, _ = nm.items[0].live.Write([]byte("cloning repo\nchecking out branch\n"))
 	if !strings.Contains(nm.View(), "checking out branch · 0s") {
 		t.Error("busy status should relay the command's latest output line")
 	}
@@ -154,7 +154,7 @@ func TestRowsStayOnOneLineAndTruncate(t *testing.T) {
 	m.width = 60
 	next, _ := m.Update(key(tea.KeySpace))
 	nm := next.(Model)
-	nm.items[0].live.Write([]byte("cloning the repository\n"))
+	_, _ = nm.items[0].live.Write([]byte("cloning the repository\n"))
 
 	view := nm.View()
 	if !strings.Contains(view, "…") {
