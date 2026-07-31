@@ -33,3 +33,7 @@ install:
 [doc("Run without building")]
 run *args:
     go run . {{args}}
+
+[doc("Try the TUI: examples/demo.json (items) + examples/switchboard.yaml (switch commands)")]
+demo:
+    go run . --config examples/switchboard.yaml examples/demo.json

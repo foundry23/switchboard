@@ -1,0 +1,25 @@
+{
+  "title": "Local services",
+  "items": [
+    {
+      "label": "postgres",
+      "description": "local database",
+      "args": { "name": "postgres" }
+    },
+    {
+      "label": "redis",
+      "description": "cache",
+      "args": { "name": "redis" }
+    },
+    {
+      "label": "mailhog",
+      "description": "catches outgoing mail",
+      "args": { "name": "mailhog" }
+    },
+    {
+      "label": "webhook tunnel",
+      "description": "arg contains a space — escaping handles it",
+      "args": { "name": "webhook tunnel" }
+    }
+  ]
+}

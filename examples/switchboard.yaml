@@ -1,0 +1,4 @@
+switch:
+  on: echo "starting {{ .name }}"; sleep 1; mkdir -p /tmp/switchboard-example && touch /tmp/switchboard-example/{{ .name }}
+  off: echo "stopping {{ .name }}"; sleep 0.5; rm -f /tmp/switchboard-example/{{ .name }}
+  check: test -f /tmp/switchboard-example/{{ .name }}
