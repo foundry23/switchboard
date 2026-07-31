@@ -1,0 +1,5 @@
+# built binary
+/switchboard
+
+# goreleaser output
+/dist/
