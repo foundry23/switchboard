@@ -9,6 +9,14 @@ Flipping a switch runs the `on` or `off` command from your `switchboard.yaml` co
 
 ## Install
 
+With [Homebrew](https://brew.sh):
+
+```bash
+brew install foundry23/tap/switchboard
+```
+
+Or with Go:
+
 ```bash
 go install github.com/foundry23/switchboard@latest
 ```
