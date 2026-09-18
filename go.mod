@@ -3,13 +3,13 @@ module github.com/foundry23/switchboard
 go 1.26.5
 
 require (
-	al.essio.dev/pkg/shellescape v1.6.0
+	al.essio.dev/pkg/shellescape v1.6.1
 	github.com/charmbracelet/bubbles v1.0.0
 	github.com/charmbracelet/bubbletea v1.3.10
 	github.com/charmbracelet/lipgloss v1.1.0
 	github.com/charmbracelet/x/ansi v0.11.8
-	github.com/urfave/cli/v3 v3.11.0
-	golang.org/x/term v0.45.0
+	github.com/urfave/cli/v3 v3.12.0
+	golang.org/x/term v0.46.0
 	sigs.k8s.io/yaml v1.6.0
 )
 
@@ -33,7 +33,7 @@ require (
 	go.yaml.in/yaml/v2 v2.4.2 // indirect
 	golang.org/x/mod v0.38.0 // indirect
 	golang.org/x/sync v0.22.0 // indirect
-	golang.org/x/sys v0.47.0 // indirect
+	golang.org/x/sys v0.48.0 // indirect
 	golang.org/x/telemetry v0.0.0-20260708182218-49f421fb7959 // indirect
 	golang.org/x/text v0.3.8 // indirect
 	golang.org/x/tools v0.48.0 // indirect
