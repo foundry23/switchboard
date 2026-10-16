@@ -17,7 +17,7 @@ jobs:
       - uses: actions/setup-go@v7.0.0
         with:
           go-version-file: go.mod
-      - uses: goreleaser/goreleaser-action@v7.2.3
+      - uses: goreleaser/goreleaser-action@v7.3.0
         with:
           # Pinned to 2.17.x — a later goreleaser removes the deprecated `brews`.
           version: "~> v2.17.0"
